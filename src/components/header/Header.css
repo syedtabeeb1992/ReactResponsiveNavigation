@@ -1,0 +1,85 @@
+header {
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+}
+
+.logo-container {
+  flex: 1;
+  font-size: 32px;
+}
+.nav-links-wrapper {
+  display: flex;
+  flex: 1;
+  padding-top: 8px;
+}
+
+.nav-links-wrapper .nav-link {
+  flex: 0.6;
+  text-align: center;
+  cursor: pointer;
+  min-width: 138px;
+}
+
+.active span {
+  color: #ffb800;
+  border-bottom: 1px solid #ffb800;
+  padding-bottom: 4px;
+}
+
+.nav-link:hover span {
+  color: #ffb800;
+  border-bottom: 1px solid #ffb800;
+  padding-bottom: 4px;
+}
+
+@media (min-width: 959px) and (max-width: 20000px) {
+.hamburder{
+    display: none;
+}
+}
+
+@media (min-width: 300px) and (max-width: 958px) {
+    .nav-links-wrapper {
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        right: 0;
+        height: 100%;
+        top: 0;
+        width: 0px;
+        z-index: 100;
+        transition: width 1s;
+        padding-top: 33px;
+
+      
+    }
+  .width-clicked {
+    transition: width 1s;
+    width: 50%;
+    border-left: 2px solid #ffb800;
+  }
+
+  .nav-links-wrapper .nav-link {
+    flex: 0.08;
+  }
+
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.75);
+    transition: opacity 2s ease-out;
+    opacity: 1;
+  }
+
+  .hamburder {
+    font-size: 30px;
+  }
+  header {
+
+    padding: 15px 14px!important;
+}
+}
